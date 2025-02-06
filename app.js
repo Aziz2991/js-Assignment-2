@@ -177,3 +177,65 @@ document.write(`Estimated Maximun Age:${maximumAge}<br>`);
 document.write(`Amount of snacks per day:${estimatedAmount}<br>`);
 document.write(`You will need ${totalchocolate} ${favouriteChocolate} to last you until
     the ripe old age of ${maximumAge}<br>`)
+    // Chapter 6
+    // Question no 1
+    let f = 10;
+    document.write(`<h1>Result</h1>`);
+    document.write(`The value of f is:${f}<br>`);
+    document.write(`The value of ++f is:${++f}<br>`);
+    document.write(`Now the value of f is: ${f}<br>`)
+    document.write(`The value of f++ is:${f++}<br>`)
+    document.write(`Now the value of f is: ${f}<br>`);
+    document.write(`The value of --f is: ${--f}<br>`);
+    document.write(`Now the value of f is = ${f}<br>`);
+    document.write(`The value of f-- is = ${f--}<br>`);
+    document.write(`Now the value of f is = ${f}<br>`)
+
+    // Question no 2
+    let i = 2;
+    let j = 1;
+    let result = --i - --j + ++j + j--;
+    console.log(result)
+
+    i = 2;
+    i = --i;
+    console.log(i);
+    i = --i - --b;
+    console.log(i)
+
+    
+
+
+
+
+    // Question  no 3;
+    let user = prompt('Enter your name');
+    alert(`Welcome ${user}`)
+    // Question no 5;
+
+    let numbe = prompt('Enter number');
+    numbe = parseInt (numbe) || 5;
+    document.write(`<h2>Multiplication  table of ${numbe}</h2><br>`)
+    for(let i = 0; i <= 10; i++){document.write(numbe + "x" + i + "=" +(numbe * i)+ "<br>");}
+// Question no 6;
+let subject1 = prompt('Enter first subject name:');
+let subject2 = prompt('Enter second subject name:');
+let subject3 = prompt('Enter third subject name:');
+
+let totalMark = 100;
+ let marks1 = prompt('Enter obtained marks for subject1');
+ let marks2 = prompt('Enter obtained marks for subject2');
+ let marks3 = prompt('Enter obtained marks for subject 3');
+
+ let totalObtained = marks1 + marks2 + marks3;
+ let totalMaxMarks = totalMark * 3;
+
+ let percentag = (totalObtained /totalMaxMarks) * 100;
+//  we create table
+
+document.write(`<h2>Marks Sheet</h2>`);
+document.write(`<table border='1' cellpadding='5' cellspacing='0'>`);
+document.write("<tr><td>" + subject1 + "</td><td>" + totalMark + "</td><td>" + marks1 + "</td><td>" + ((marks2 / totalMark)*100).toFixed(2) + "%</td></tr>" );
+document.write("<tr><td><b>Total</b></td><td><b>" + totalMaxMarks + "</b></td><td><b>" + totalObtained + "</b></td><td><b>" + percentag.toFixed(2) + "%</b></td></tr>");
+document.write("</table>");
+
