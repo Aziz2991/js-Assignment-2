@@ -218,24 +218,20 @@ document.write(`You will need ${totalchocolate} ${favouriteChocolate} to last yo
     document.write(`<h2>Multiplication  table of ${numbe}</h2><br>`)
     for(let i = 0; i <= 10; i++){document.write(numbe + "x" + i + "=" +(numbe * i)+ "<br>");}
 // Question no 6;
-let subject1 = prompt('Enter first subject name:');
-let subject2 = prompt('Enter second subject name:');
-let subject3 = prompt('Enter third subject name:');
+var subject1 = prompt('Enter first subject name:');
+var subject2 = prompt('Enter second subject name:');
+var subject3 = prompt('Enter third  subject name:');
 
-let totalMark = 100;
- let marks1 = prompt('Enter obtained marks for subject1');
- let marks2 = prompt('Enter obtained marks for subject2');
- let marks3 = prompt('Enter obtained marks for subject 3');
+var totalMarkss = 100;
+ var marks1 = +prompt("Enter marks for " + subject1 + ":");
+ var marks2 = +prompt("Enter marks for " + subject2 + ":");
+ var marks3 = +prompt("Enter marks for " + subject3 + ":");
 
- let totalObtained = marks1 + marks2 + marks3;
- let totalMaxMarks = totalMark * 3;
+ var  totalObtained = marks1 + marks2 + marks3;
+ var percentagee = (totalObtained / (totalMarkss * 3)) * 100;
+ document.write("<h2> Result</h2>");
+ document.write("<p>" + subject1 + ":" + marks1 + "/" + totalMarkss + "</p>");
+ document.write("<p>" + subject2 + ":" + marks2 + "/" + totalMarkss + "</p>");
+ document.write("<p>" + subject3 + ":" + marks3 + "/" + totalMarkss + "</p>");
 
- let percentag = (totalObtained /totalMaxMarks) * 100;
-//  we create table
-
-document.write(`<h2>Marks Sheet</h2>`);
-document.write(`<table border='1' cellpadding='5' cellspacing='0'>`);
-document.write("<tr><td>" + subject1 + "</td><td>" + totalMark + "</td><td>" + marks1 + "</td><td>" + ((marks2 / totalMark)*100).toFixed(2) + "%</td></tr>" );
-document.write("<tr><td><b>Total</b></td><td><b>" + totalMaxMarks + "</b></td><td><b>" + totalObtained + "</b></td><td><b>" + percentag.toFixed(2) + "%</b></td></tr>");
-document.write("</table>");
-
+ document.write("<p> <b> Percentagee:</b>" + percentagee.toFixed(2) + "%</p>")
